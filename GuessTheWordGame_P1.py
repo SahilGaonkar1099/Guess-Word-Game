@@ -1,7 +1,7 @@
 import random as r
 
 def StringToList():#This function reads the file content and then converts its contents to list and returns the words list
-    with open("C:\\Users\\Sahil\\Desktop\\FruitNames_GWG_P1.txt",'r') as F:
+    with open("Filename.txt",'r') as F:
         words=F.read()
         wordsList=words.split()#read contents gets converted to list of words
     return(wordsList)
