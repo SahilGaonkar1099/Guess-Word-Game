@@ -1,6 +1,6 @@
 import random as r
 
-def StringToList():#This function reads the file content and then converts its contents to list and returns the words list
+def StringToList():#This function reads the file content and then converts its contents to list and returns the list of words
     with open("Filename.txt",'r') as F:
         words=F.read()
         wordsList=words.split()#read contents gets converted to list of words
@@ -8,13 +8,13 @@ def StringToList():#This function reads the file content and then converts its c
 
 print("WELCOME TO GUESS THE WORD GAME \n\n")
 
-def LenOfWord():
+def LenOfWord():#This function ask for the length of word to the user and based on the word length computer selects the random word avaible in the given file.
     word = []
     W=input("Enter the Size[4-20] of the word U want to crack:\n")
     while len(word) != int(W):
         word = r.choice(StringToList())
-    return word
-def Game():
+    return word# random word is returned
+def Game():#Here the actual game begins
     i=0
     while True:
         print("GUESS GAME BEGINS\n")
